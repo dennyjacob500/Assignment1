@@ -1,0 +1,14 @@
+	
+	.container{
+    	margin: 20px;
+        border: 4px #f7f7f9 solid;
+        padding: 20px;
+    }
+	/* Fix alignment issue of label on extra small devices in Bootstrap 3.2 */
+    .form-horizontal .control-label{
+        padding-top: 7px;
+    }
+    form .error {
+  		color: #ff0000;
+	}
+

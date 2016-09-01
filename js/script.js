@@ -62,6 +62,7 @@ return this.optional(element) ||  /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
+      alert('Detail Submitted');
       form.submit();
     }
   });

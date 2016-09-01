@@ -1,6 +1,10 @@
 $(function() {
+  jQuery.validator.addMethod("lettersonly", function(value, element) {
+return this.optional(element) || /^[a-z\s]+$/i.test(value);
+}, "Only alphabetical characters");
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
+
   $("form[name='registration']").validate({
     // Specify validation rules
     rules: {
@@ -9,7 +13,8 @@ $(function() {
       // on the right side
       firstname: {
         required: true,
-        maxlength: 50
+        maxlength: 50,
+        lettersonly: true
       },
       userName: {
         required: true,
@@ -24,7 +29,6 @@ $(function() {
       },
       confPassword: {
             required: true,
-            minlength: 5,
             equalTo: "#inputPassword"
       },
       dob:{
